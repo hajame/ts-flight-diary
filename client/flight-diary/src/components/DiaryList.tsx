@@ -1,14 +1,4 @@
-export interface DiaryEntry {
-  id: number;
-  date: string;
-  weather: string;
-  visibility: string;
-  comment: string;
-}
-
-interface DiaryData {
-  diaryData: DiaryEntry[]
-}
+import { DiaryData } from "../types/DiaryData";
 
 export const DiaryList = (props: DiaryData) => {
   return (

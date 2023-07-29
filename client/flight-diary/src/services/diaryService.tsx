@@ -1,4 +1,4 @@
-import { DiaryEntry } from "../components/DiaryList";
+import { DiaryEntry } from "../types/DiaryEntry";
 
 export const diaries = [
   { 

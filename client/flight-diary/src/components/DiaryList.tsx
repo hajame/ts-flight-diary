@@ -1,10 +1,17 @@
 import { DiaryData } from "../types/DiaryData";
 
 export const DiaryList = (props: DiaryData) => {
+  
+  const entries = props.diaryData.filter(
+    entry => (entry.kind === "full" || "sensitive"));
+  
   return (
    <div>
-    {props.diaryData.map(diary => (
-      <p key={diary.id}>{diary.date}, {diary.weather}, {diary.visibility}, {diary.comment}</p>
+    {entries.map(entry => (
+      <p key={entry.id}>
+        {entry.date}, {entry.weather}, {entry.visibility}
+        {entry.kind === "full" && `, ${entry.comment}`}
+      </p>
     ))}
    </div>
   );

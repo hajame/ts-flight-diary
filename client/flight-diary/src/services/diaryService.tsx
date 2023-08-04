@@ -6,13 +6,14 @@ export const diaries = [
     date: "2017-01-01",
     weather: "rainy",
     visibility: "poor",
-    comment: "This was not a fun flight."
+    kind: "sensitive"
   },
   { 
     id: 2,
     date: "2017-02-01",
     weather: "sunny",
     visibility: "good",
-    comment: "This was a fun flight!"
+    comment: "This was a fun flight!",
+    kind: "full"
   }
 ] as DiaryEntry[]

@@ -1,19 +1,22 @@
 interface DiaryEntryBase {
   id: number;
   date: string;
+  weather: string;
+  visibility: string;
 }
 
 interface DiaryEntrySensitive extends DiaryEntryBase {
-  weather: string;
-  visibility: string;
   kind: "sensitive"
 }
 
 interface DiaryEntryFull extends DiaryEntryBase {
-  weather: string;
-  visibility: string;
   comment: string;
   kind: "full"
 }
 
-export type DiaryEntry = DiaryEntrySensitive | DiaryEntryFull
+interface DiaryEntryBirds extends DiaryEntryBase {
+  kind: "birds";
+  birds: string[];
+}
+
+export type DiaryEntry = DiaryEntrySensitive | DiaryEntryFull | DiaryEntryBirds

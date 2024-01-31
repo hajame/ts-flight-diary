@@ -11,6 +11,7 @@ export const DiaryList = (props: DiaryData) => {
       <p key={entry.id}>
         {entry.date}, {entry.weather}, {entry.visibility}
         {entry.kind === "full" && `, ${entry.comment}`}
+        {entry.kind === "birds" && `, SAW BIRDS: ${entry.birds.join(', ')}!`}
       </p>
     ))}
    </div>

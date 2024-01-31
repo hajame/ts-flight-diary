@@ -1,6 +1,6 @@
 import { DiaryEntry } from "../types/DiaryEntry";
 
-export const diaries = [
+export const diaries: DiaryEntry[] = [
   { 
     id: 1,
     date: "2017-01-01",
@@ -8,7 +8,7 @@ export const diaries = [
     visibility: "poor",
     kind: "sensitive"
   },
-  { 
+  {
     id: 2,
     date: "2017-02-01",
     weather: "sunny",
@@ -16,4 +16,4 @@ export const diaries = [
     comment: "This was a fun flight!",
     kind: "full"
   }
-] as DiaryEntry[]
+]
